@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Смотрим вместе</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><span class="symbol">▶</span><div><h1>Смотрим вместе</h1><p>Одно видео. Общая пауза.</p></div></header>
+  <label for="server">Сервер синхронизации</label>
+  <input id="server" type="url" value="http://localhost:8787" placeholder="https://sync.example.com" spellcheck="false">
+  <p class="hint">У обоих участников должен быть один адрес сервера.</p>
+  <section id="disconnected">
+    <button id="create" class="primary">Создать комнату</button>
+    <div class="separator">или присоединиться</div>
+    <label for="code">Код комнаты</label>
+    <input id="code" placeholder="Вставьте код от друга" maxlength="24" spellcheck="false" autocomplete="off">
+    <button id="join" class="secondary">Присоединиться</button>
+  </section>
+  <section id="connected" hidden>
+    <div class="status"><span></span> Вы в комнате</div>
+    <label for="share-code">Отправьте этот код другу</label>
+    <input id="share-code" readonly>
+    <button id="copy" class="primary">Скопировать код</button>
+    <p class="hint">Откройте одинаковое видео на обоих устройствах. Паузой и перемоткой может управлять каждый.</p>
+    <button id="leave" class="secondary">Отключиться</button>
+  </section>
+  <p id="message" role="status" aria-live="polite"></p>
+  <footer>Работает в текущей вкладке · v0.1</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

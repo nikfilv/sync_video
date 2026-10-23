@@ -1,0 +1,26 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #111421; color: #f5f4ff; }
+* { box-sizing: border-box; }
+body { width: 356px; margin: 0; padding: 24px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.symbol { display: grid; place-items: center; width: 44px; height: 44px; background: #8d7bff; border-radius: 14px; font-size: 21px; }
+h1 { font-size: 19px; margin: 0 0 4px; letter-spacing: -.4px; }
+header p { margin: 0; color: #aaaec5; font-size: 12px; }
+label { display: block; margin-bottom: 8px; font-size: 12px; color: #d4d6e7; }
+input { width: 100%; border: 1px solid #373b53; background: #1c2032; color: #fff; border-radius: 9px; padding: 11px 12px; font: 13px system-ui; }
+input:focus { outline: 2px solid #a595ff; outline-offset: 2px; }
+input:disabled { opacity: .65; }
+button { width: 100%; border: 0; border-radius: 9px; padding: 12px; font: 600 13px system-ui; cursor: pointer; margin-top: 12px; }
+button:disabled { opacity: .5; cursor: wait; }
+.primary { background: #9785ff; color: #131021; }
+.primary:hover { background: #ac9dff; }
+.secondary { background: #262b42; color: #e6e5f7; }
+.secondary:hover { background: #343a56; }
+.hint { font-size: 11px; line-height: 1.6; color: #a2a8c0; margin: 8px 0 12px; }
+.separator { display: flex; gap: 10px; align-items: center; font-size: 11px; color: #9299b5; margin: 22px 0; }
+.separator::before, .separator::after { content: ''; height: 1px; background: #30344c; flex: 1; }
+.status { margin: 20px 0; font-size: 13px; color: #a5e1c3; }
+.status span { display: inline-block; width: 7px; height: 7px; background: #83d3ae; border-radius: 50%; margin-right: 5px; }
+#share-code { font-family: ui-monospace, monospace; font-size: 14px; }
+#message { color: #ffcf95; font-size: 12px; line-height: 1.5; margin-bottom: 0; overflow-wrap: anywhere; }
+footer { border-top: 1px solid #2b3047; padding-top: 14px; margin-top: 22px; color: #848da8; font-size: 10px; text-align: center; }
+[hidden] { display: none !important; }

@@ -1,0 +1,13 @@
+{
+  "name": "sync-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Synchronize video playback on original websites",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test",
+    "check": "node --check server/index.js && node --check extension/background.js && node --check extension/content.js && node --check extension/popup.js"
+  },
+  "engines": { "node": ">=20" }
+}

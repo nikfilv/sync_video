@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Смотрим вместе — Sync Video",
+  "version": "0.1.0",
+  "description": "Общая пауза, воспроизведение и перемотка видео прямо на сайтах.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Смотрим вместе" },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"],
+    "all_frames": true,
+    "match_about_blank": true,
+    "run_at": "document_idle"
+  }]
+}
